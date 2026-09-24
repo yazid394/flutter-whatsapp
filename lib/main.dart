@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
 
         body: TabBarView(
           children: [
-            Column(
+            ListView(
               children: [
                 Card(
                   elevation: 5,
@@ -59,6 +59,146 @@ class _HomePageState extends State<HomePage> {
                     title: Text("Dizayy"),
                     subtitle: Text('Oke'),
                     trailing: Text('50', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Widiee"),
+                    subtitle: Text('kapan?'),
+                    trailing: Text('2', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Abdur"),
+                    subtitle: Text('Bareng atuh di motor...'),
+                    trailing: Text('4', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Client"),
+                    subtitle: Text('kurang element deh zid'),
+                    trailing: Text('3', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Ridaxc"),
+                    subtitle: Text('jit, jarjit'),
+                    trailing: Text('6', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("fira pradanack"),
+                    subtitle: Text('iyaa nnt surat mandatnya nyusul'),
+                    trailing: Text('1', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("khanapi"),
+                    subtitle: Text('bsc malem ini yaa..'),
+                    trailing: Text('4', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("SAMSUNG INOVSTION CAMPUS (SIC)"),
+                    subtitle: Text('Ayoo masuk zoom nya, kuota zoomnya masih banyak kok'),
+                    trailing: Text('3', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Albert"),
+                    subtitle: Text('iye bet elahh'),
+                    trailing: Text('1', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Cilla"),
+                    subtitle: Text('ihh cilung enak deh'),
+                    trailing: Text('2', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Haika"),
+                    subtitle: Text('zid zdi, gozay'),
+                    trailing: Text('8', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("Gio"),
+                    subtitle: Text('ehh besok jadi seleksi gk?'),
+                    trailing: Text('2', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("mabar epep"),
+                    subtitle: Text('janlup sparing sama kampung sebelah'),
+                    trailing: Text('3', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("eskul flutter"),
+                    subtitle: Text('segitu saja pertemuan kita kali ini'),
+                    trailing: Text('3', style: TextStyle(color: Colors.green)),
+                  ),
+                ),
+
+                Card(
+                  elevation: 5,
+                  child: ListTile(
+                    leading: Icon(Icons.person),
+                    title: Text("PP"),
+                    subtitle: Text('itu ceritanya jadi apa?'),
+                    trailing: Text('2', style: TextStyle(color: Colors.green)),
                   ),
                 ),
               ],

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:widget_lanjut/detail_chat.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -9,7 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: HomePage());
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false, // Menghilangkan banner debug
+      home: HomePage(),
+    );
   }
 }
 
@@ -27,207 +31,156 @@ class _HomePageState extends State<HomePage> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Whatsapp'),
+          title: const Text(
+            'WhatsApp',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           backgroundColor: Colors.green,
-          bottom: TabBar(
+          bottom: const TabBar(
+            indicatorColor: Colors.white,
             tabs: [
               Tab(icon: Icon(Icons.chat)),
-              Tab(icon: Icon(Icons.circle_outlined)),
+              Tab(icon: Icon(Icons.track_changes)),
               Tab(icon: Icon(Icons.call)),
             ],
           ),
         ),
-
         body: TabBarView(
           children: [
-            ListView(
+            Column(
+              // padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
               children: [
                 Card(
-                  elevation: 5,
                   child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Silverqueen"),
-                    subtitle: Text('Mau dispen gak?'),
-                    trailing: Text('50', style: TextStyle(color: Colors.green)),
+                    leading: Icon(Icons.archive),
+                    title: Text("Diarsipkan"),
                   ),
                 ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Dizayy"),
-                    subtitle: Text('Oke'),
-                    trailing: Text('50', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Widiee"),
-                    subtitle: Text('kapan?'),
-                    trailing: Text('2', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Abdur"),
-                    subtitle: Text('Bareng atuh di motor...'),
-                    trailing: Text('4', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Client"),
-                    subtitle: Text('kurang element deh zid'),
-                    trailing: Text('3', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Ridaxc"),
-                    subtitle: Text('jit, jarjit'),
-                    trailing: Text('6', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("fira pradanack"),
-                    subtitle: Text('iyaa nnt surat mandatnya nyusul'),
-                    trailing: Text('1', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("khanapi"),
-                    subtitle: Text('bsc malem ini yaa..'),
-                    trailing: Text('4', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("SAMSUNG INOVSTION CAMPUS (SIC)"),
-                    subtitle: Text('Ayoo masuk zoom nya, kuota zoomnya masih banyak kok'),
-                    trailing: Text('3', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Albert"),
-                    subtitle: Text('iye bet elahh'),
-                    trailing: Text('1', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Cilla"),
-                    subtitle: Text('ihh cilung enak deh'),
-                    trailing: Text('2', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Haika"),
-                    subtitle: Text('zid zdi, gozay'),
-                    trailing: Text('8', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("Gio"),
-                    subtitle: Text('ehh besok jadi seleksi gk?'),
-                    trailing: Text('2', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("mabar epep"),
-                    subtitle: Text('janlup sparing sama kampung sebelah'),
-                    trailing: Text('3', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("eskul flutter"),
-                    subtitle: Text('segitu saja pertemuan kita kali ini'),
-                    trailing: Text('3', style: TextStyle(color: Colors.green)),
-                  ),
-                ),
-
-                Card(
-                  elevation: 5,
-                  child: ListTile(
-                    leading: Icon(Icons.person),
-                    title: Text("PP"),
-                    subtitle: Text('itu ceritanya jadi apa?'),
-                    trailing: Text('2', style: TextStyle(color: Colors.green)),
+                InkWell(
+                  onTap: () {
+                    // print("Chat Ditekan!");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DetailChat()),
+                    );
+                  },
+                  child: Card(
+                    elevation: 5,
+                    child: ListTile(
+                      leading: Icon(Icons.person),
+                      title: Text("silqXjant"),
+                      subtitle: Row(
+                        children: [
+                          Icon(Icons.done_all, size: 15),
+                          SizedBox(width: 4),
+                          Text("amann aja, nanti sama aku dibantuin"),
+                        ],
+                      ),
+                      trailing: Text(
+                        '5:31',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ),
                   ),
                 ),
               ],
             ),
-
-            Column(
+            ListView(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
               children: [
-                ListTile(
-                  leading: Icon(Icons.add_circle_outline_sharp),
-                  title: Text('My status'),
+                const ListTile(
+                  leading: Icon(Icons.add_circle_outline_sharp, size: 40),
+                  title: Text(
+                    'My status',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                   subtitle: Text('Tap to add status update'),
                 ),
-                Text('Recent updates'),
-                ListTile(
-                  leading: Icon(Icons.person),
+                const Divider(),
+                const Padding(
+                  padding: EdgeInsets.only(left: 16.0, top: 12.0, bottom: 8.0),
+                  child: Text(
+                    'Recent updates',
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+                const ListTile(
+                  leading: Icon(Icons.person, size: 35),
                   title: Text('Dizayyy'),
                   subtitle: Text('2 minutes ago'),
-                )
+                ),
               ],
             ),
-
-
-            Column(
+            ListView(
+              padding: const EdgeInsets.all(16.0),
               children: [
+                const Text(
+                  'Favourites',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(height: 12),
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16.0),
+                  ),
+                  child: ListTile(
+                    leading: const CircleAvatar(
+                      backgroundColor: Color(0xFF00A884),
+                      child: Icon(Icons.person_add, color: Colors.black),
+                    ),
+                    title: const Text(
+                      'Add favourite',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                const SizedBox(height: 24),
+                const Text(
+                  'Recent',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                const SizedBox(height: 12),
                 ListTile(
-                  leading: Icon(Icons.call),
-                  title: Text('Dizayyy'),
-                  subtitle: Text('15 minutes ago', style: TextStyle(color: Colors.red),),
-                )
+                  contentPadding: EdgeInsets.zero,
+                  leading: const CircleAvatar(
+                    radius: 24,
+                    backgroundImage: AssetImage('assets/profile.png'),
+                  ),
+                  title: const Text(
+                    'PT Bohlam Djaya',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  subtitle: const Row(
+                    children: [
+                      Icon(Icons.call_missed, color: Colors.red, size: 18),
+                      SizedBox(width: 4),
+                      Text('Missed (2)', style: TextStyle(color: Colors.red)),
+                    ],
+                  ),
+                  trailing: const Text(
+                    '21/09/2026',
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
+                ),
               ],
             ),
           ],
